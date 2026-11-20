@@ -9,12 +9,12 @@ Personal portfolio for AI engineering, GenAI, agent workflows, and full-stack pr
 | Vercel | https://portfolio-three-delta-j35dmdk1bg.vercel.app | Live |
 | Netlify | https://joyful-pegasus-f68efd.netlify.app | Live |
 | Firebase Hosting | https://elated-garden-472910-m2.web.app | Live |
-| Cloudflare Pages | Pending `wrangler login` / `CLOUDFLARE_API_TOKEN` | Not deployed |
+| Cloudflare Pages | https://8380ea3c.saragadam-kalyan-ai-portfolio.pages.dev/ | Live |
 | Deno Deploy | Pending `DENO_DEPLOY_TOKEN` | Not deployed |
 
 The Vercel project alias may also resolve at https://portfolio-kalyan870s-projects.vercel.app. The primary URL above is the production alias returned by the successful deployment.
 
-Cloudflare Pages and Deno Deploy are not active: this environment has no Cloudflare API token or Deno Deploy token. Their workflows can be added once credentials are available.
+The Cloudflare Pages deployment is live. The custom domain `kalyan.ai` is not yet listed as connected. Deno Deploy remains pending because no `DENO_DEPLOY_TOKEN` is configured.
 
 ## Architecture
 
@@ -23,8 +23,10 @@ flowchart LR
     Visitor[Visitor Browser] --> Host{Static Hosting}
     Host --> Vercel[Vercel]
     Host --> Netlify[Netlify]
+    Host --> Cloudflare[Cloudflare Pages]
     Vercel --> SPA[React + TypeScript SPA]
     Netlify --> SPA
+    Cloudflare --> SPA
     Firebase --> SPA
     SPA --> Assets[Portfolio sections and bundled assets]
     SPA --> Firebase[Firebase Auth + Firestore<br/>optional build-time config]
