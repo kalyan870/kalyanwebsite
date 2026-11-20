@@ -10,11 +10,10 @@ Personal portfolio for AI engineering, GenAI, agent workflows, and full-stack pr
 | Netlify | https://joyful-pegasus-f68efd.netlify.app | Live |
 | Firebase Hosting | https://elated-garden-472910-m2.web.app | Live |
 | Cloudflare Pages | https://8380ea3c.saragadam-kalyan-ai-portfolio.pages.dev/ | Live |
-| Deno Deploy | Pending `DENO_DEPLOY_TOKEN` | Not deployed |
 
 The Vercel project alias may also resolve at https://portfolio-kalyan870s-projects.vercel.app. The primary URL above is the production alias returned by the successful deployment.
 
-The Cloudflare Pages deployment is live. The custom domain `kalyan.ai` is not yet listed as connected. Deno Deploy remains pending because no `DENO_DEPLOY_TOKEN` is configured.
+The Cloudflare Pages deployment is live. The custom domain `kalyan.ai` is not yet listed as connected.
 
 ## Architecture
 
