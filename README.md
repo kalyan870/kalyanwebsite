@@ -40,19 +40,19 @@ The frontend is a static Vite build in `dist/`. Vercel, Netlify, and Firebase Ho
 
 ## Screenshots
 
-Project images copied from the app source:
+Screenshots captured from the deployed app:
 
 ### Portfolio hero
 
-![Portfolio hero portrait](docs/screenshots/hero.jpg)
+![Portfolio homepage and hero](docs/screenshots/portfolio-home.png)
 
-### Workspace
+### About and workspace section
 
-![Kalyan at his engineering workspace](docs/screenshots/workspace.jpg)
+![About section as shown in the deployed app](docs/screenshots/about-section.png)
 
-### AI architecture
+### Projects and architecture section
 
-![AI architecture project illustration](docs/screenshots/architecture.jpg)
+![Projects section as shown in the deployed app](docs/screenshots/projects-section.png)
 
 ## Local development
 
