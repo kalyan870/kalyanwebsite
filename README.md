@@ -1,6 +1,39 @@
 # Kalyan Saragadam — AI Engineer & Full Stack Developer
 
-A responsive portfolio built with React, TypeScript, Vite, Tailwind CSS, Firebase, and Gemini API routes.
+Personal portfolio for AI engineering, GenAI, agent workflows, and full-stack projects. Built with React 19, TypeScript, Vite 8, Tailwind CSS, Firebase, and Gemini server routes.
+
+## Live deployments
+
+| Host | Production URL | Status |
+| --- | --- | --- |
+| Vercel | https://portfolio-three-delta-j35dmdk1bg.vercel.app | Live |
+| Netlify | https://joyful-pegasus-f68efd.netlify.app | Live |
+| Cloudflare Pages | Pending Cloudflare authentication | Not deployed |
+
+The Vercel project alias may also resolve at https://portfolio-kalyan870s-projects.vercel.app. The primary URL above is the production alias returned by the successful deployment.
+
+## Architecture
+
+```mermaid
+flowchart LR
+    Visitor[Visitor Browser] --> Host{Static Hosting}
+    Host --> Vercel[Vercel]
+    Host --> Netlify[Netlify]
+    Host -. optional .-> CF[Cloudflare Pages]
+    Vercel --> SPA[React + TypeScript SPA]
+    Netlify --> SPA
+    CF -. serves dist .-> SPA
+    SPA --> Assets[Portfolio sections and bundled assets]
+    SPA --> Firebase[Firebase Auth + Firestore<br/>optional build-time config]
+    SPA --> API[API routes]
+    API --> Gemini[Gemini API<br/>server-side key]
+    API --> Providers[Contact, newsletter, social data providers]
+    GitHub[GitHub main branch] --> CI[GitHub Actions]
+    CI --> Netlify
+    CI -. when credentials are configured .-> CF
+```
+
+The frontend is a static Vite build in `dist/`. Netlify and Vercel host the current production builds. Firebase and server-backed integrations require deployment environment variables; static hosting alone does not activate the Express API routes.
 
 ## Local development
 
@@ -11,7 +44,7 @@ npm install --legacy-peer-deps
 npm run dev
 ```
 
-Create a local `.env` from `.env.example` to enable optional integrations. Never commit `.env` files or provider credentials.
+Create a local `.env` from `.env.example` to enable integrations. Do not commit local environment files or provider credentials.
 
 ## Build
 
@@ -20,13 +53,13 @@ npm run build
 npm run preview
 ```
 
-## Deployment
+The project uses Vite 8 with esbuild 0.28. CI installs use `--legacy-peer-deps` for the current upstream peer dependency graph.
 
-The static portfolio builds into `dist/` and can be deployed to Netlify or Vercel. Netlify configuration is in `netlify.toml`; Vercel configuration is in `vercel.json`.
+## Deployment configuration
 
-Set `NPM_CONFIG_LEGACY_PEER_DEPS=true` for CI installs. The repository uses Node 24.x and pins esbuild 0.28 to match Vite 8.
+Vercel uses `vercel.json`; Netlify uses `netlify.toml`. Cloudflare Pages can publish the same static `dist/` output with build command `npm install --legacy-peer-deps && npm run build`.
 
-For Firebase sign-in and saved bookmarks, add these build-time variables to the host:
+Firebase sign-in and saved bookmarks need these build-time variables on the host:
 
 - `VITE_FIREBASE_API_KEY`
 - `VITE_FIREBASE_AUTH_DOMAIN`
@@ -36,10 +69,14 @@ For Firebase sign-in and saved bookmarks, add these build-time variables to the 
 - `VITE_FIREBASE_APP_ID`
 - `VITE_FIREBASE_DATABASE_ID`
 
-Server integrations can require `GEMINI_API_KEY`, `RESEND_API_KEY`, or newsletter provider credentials. Configure them as server-side environment variables only. Never use a `VITE_` prefix for private credentials.
+Server integrations may need `GEMINI_API_KEY`, `RESEND_API_KEY`, or newsletter provider credentials. Keep those server-side; never use a `VITE_` prefix for private credentials.
 
-Netlify production auto-deploy uses the `NETLIFY_AUTH_TOKEN` and `NETLIFY_SITE_ID` GitHub Actions secrets. Optional Vercel deployments can be connected in the Vercel dashboard.
+### GitHub Actions secrets
 
-## Security and repository scope
+The Netlify workflow uses `NETLIFY_AUTH_TOKEN` and `NETLIFY_SITE_ID`. It also accepts the Firebase variables above as repository secrets.
 
-AI Studio working files, generated Firebase project configuration, draft rules, build outputs, dependencies, and local environment files are excluded from version control. Configure your own Firebase project and review its security rules before enabling authenticated data features.
+The Cloudflare Pages workflow uses `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`. Create the Pages project named `saragadam-kalyan-ai-portfolio` in Cloudflare before enabling that workflow. Configure any Firebase build variables as repository secrets too.
+
+## Repository scope
+
+AI Studio working artifacts, generated Firebase project configuration, draft rules, local environment files, dependencies, and build outputs are excluded. Configure your own Firebase project and review its security rules before enabling authenticated storage.
