@@ -9,6 +9,8 @@ Personal portfolio for AI engineering, GenAI, agent workflows, and full-stack pr
 | Vercel | https://portfolio-three-delta-j35dmdk1bg.vercel.app | Live |
 | Netlify | https://joyful-pegasus-f68efd.netlify.app | Live |
 | Firebase Hosting | https://elated-garden-472910-m2.web.app | Live |
+| Cloudflare Pages | Pending `wrangler login` / `CLOUDFLARE_API_TOKEN` | Not deployed |
+| Deno Deploy | Pending `DENO_DEPLOY_TOKEN` | Not deployed |
 
 The Vercel project alias may also resolve at https://portfolio-kalyan870s-projects.vercel.app. The primary URL above is the production alias returned by the successful deployment.
 
@@ -38,7 +40,19 @@ The frontend is a static Vite build in `dist/`. Vercel, Netlify, and Firebase Ho
 
 ## Screenshots
 
-The deployed site includes screenshots and illustrations in its app assets under `public/assets/aistudio/`. Open the [live portfolio](https://portfolio-three-delta-j35dmdk1bg.vercel.app/) for the current UI. A fresh browser capture could not be exported as a repository image in this environment.
+Project images copied from the app source:
+
+### Portfolio hero
+
+![Portfolio hero portrait](docs/screenshots/hero.jpg)
+
+### Workspace
+
+![Kalyan at his engineering workspace](docs/screenshots/workspace.jpg)
+
+### AI architecture
+
+![AI architecture project illustration](docs/screenshots/architecture.jpg)
 
 ## Local development
 
