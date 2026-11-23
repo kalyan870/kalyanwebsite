@@ -6,14 +6,14 @@ Personal portfolio for AI engineering, GenAI, agent workflows, and full-stack pr
 
 | Host | Production URL | Status |
 | --- | --- | --- |
-| Vercel | https://portfolio-three-delta-j35dmdk1bg.vercel.app | Live |
+| Vercel | https://saragadam-kalyan-ai-portfolio-kalyan870s-projects.vercel.app | Live |
 | Netlify | https://joyful-pegasus-f68efd.netlify.app | Live |
 | Firebase Hosting | https://elated-garden-472910-m2.web.app | Live |
 | Cloudflare Pages | https://8380ea3c.saragadam-kalyan-ai-portfolio.pages.dev/ | Live |
 
 The Vercel project alias may also resolve at https://portfolio-kalyan870s-projects.vercel.app. The primary URL above is the production alias returned by the successful deployment.
 
-The Cloudflare Pages deployment is live. The custom domain `kalyan.ai` is not yet listed as connected.
+The Cloudflare Pages URL is a prior deployment. The repository workflow builds every push and publishes only when `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` are configured as GitHub Actions secrets. The custom domains `kalyan.ai` and `showcase.kalyan.ai` currently need DNS updates at their registrar before Vercel can verify them.
 
 ## Architecture and deployment boundaries
 
