@@ -1,21 +1,8 @@
-import { useCallback, useEffect, useState } from "react";
-import AboutSection from "./components/AboutSection";
-import AiLabSection from "./components/AiLabSection";
-import BlogSection from "./components/BlogSection";
-import CertificatesSection from "./components/CertificatesSection";
-import ContactSection from "./components/ContactSection";
-import FeaturedSection from "./components/FeaturedSection";
-import FocusDimensions from "./components/FocusDimensions";
+import { lazy, Suspense, useCallback, useEffect, useState, type ReactNode } from "react";
 import Footer from "./components/Footer";
-import GitHubActivitySection from "./components/GitHubActivitySection";
 import HeroSection from "./components/HeroSection";
-import LabVaultSection from "./components/LabVaultSection";
-import LinkedInSection from "./components/LinkedInSection";
 import Navbar from "./components/Navbar";
-import NewsletterSection from "./components/NewsletterSection";
-import ProjectsSection from "./components/ProjectsSection";
 import ReadingProgressBar from "./components/ReadingProgressBar";
-import ResumeSection from "./components/ResumeSection";
 import {
   CURATED_PROJECTS,
   FALLBACK_SUBSTACK_POSTS,
@@ -28,6 +15,24 @@ import {
   buildDefaultMeta,
   buildProjectMeta,
 } from "./utils/socialMeta";
+
+const AboutSection = lazy(() => import("./components/AboutSection"));
+const FocusDimensions = lazy(() => import("./components/FocusDimensions"));
+const ProjectsSection = lazy(() => import("./components/ProjectsSection"));
+const AiLabSection = lazy(() => import("./components/AiLabSection"));
+const GitHubActivitySection = lazy(() => import("./components/GitHubActivitySection"));
+const LinkedInSection = lazy(() => import("./components/LinkedInSection"));
+const CertificatesSection = lazy(() => import("./components/CertificatesSection"));
+const ResumeSection = lazy(() => import("./components/ResumeSection"));
+const FeaturedSection = lazy(() => import("./components/FeaturedSection"));
+const BlogSection = lazy(() => import("./components/BlogSection"));
+const NewsletterSection = lazy(() => import("./components/NewsletterSection"));
+const LabVaultSection = lazy(() => import("./components/LabVaultSection"));
+const ContactSection = lazy(() => import("./components/ContactSection"));
+
+function SectionBoundary({ children }: { children: ReactNode }) {
+  return <Suspense fallback={<div aria-hidden="true" className="min-h-16" />}>{children}</Suspense>;
+}
 
 function parseRouteFromLocation(): { projectSlug: string | null; postSlug: string | null } {
   const path = window.location.pathname;
@@ -179,29 +184,29 @@ export default function App() {
 
       <main id="main">
         <HeroSection />
-        <AboutSection />
-        <FocusDimensions />
-        <ProjectsSection
+        <SectionBoundary><AboutSection /></SectionBoundary>
+        <SectionBoundary><FocusDimensions /></SectionBoundary>
+        <SectionBoundary><ProjectsSection
           selectedProject={selectedProject}
           onSelectProject={handleSelectProject}
-        />
-        <AiLabSection />
-        <GitHubActivitySection />
-        <LinkedInSection />
-        <CertificatesSection />
-        <ResumeSection />
-        <FeaturedSection />
-        <BlogSection
+        /></SectionBoundary>
+        <SectionBoundary><AiLabSection /></SectionBoundary>
+        <SectionBoundary><GitHubActivitySection /></SectionBoundary>
+        <SectionBoundary><LinkedInSection /></SectionBoundary>
+        <SectionBoundary><CertificatesSection /></SectionBoundary>
+        <SectionBoundary><ResumeSection /></SectionBoundary>
+        <SectionBoundary><FeaturedSection /></SectionBoundary>
+        <SectionBoundary><BlogSection
           posts={substackPosts}
           loading={substackLoading}
           errorMsg={substackError}
           onRefresh={loadSubstackPosts}
           activeArticle={activeArticle}
           onSelectArticle={handleSelectArticle}
-        />
-        <NewsletterSection />
-        <LabVaultSection />
-        <ContactSection />
+        /></SectionBoundary>
+        <SectionBoundary><NewsletterSection /></SectionBoundary>
+        <SectionBoundary><LabVaultSection /></SectionBoundary>
+        <SectionBoundary><ContactSection /></SectionBoundary>
       </main>
 
       <Footer

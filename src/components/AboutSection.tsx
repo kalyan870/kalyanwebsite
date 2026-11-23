@@ -3,10 +3,10 @@ import { ArrowUpRight, Maximize2, X } from "lucide-react";
 import { PROFILE } from "../data/kalyanData";
 
 const ABOUT_PORTRAIT_SRC =
-  "/assets/aistudio/file_00000000ffb88211ba8776c57fc83f71_2791da84.png";
+  "/assets/aistudio/file_00000000ffb88211ba8776c57fc83f71_2791da84.webp";
 
 const ENGINEERING_POSTER_SRC =
-  "/assets/aistudio/file_00000000ca28821180ba196dbc5c5f05_960296c9.png";
+  "/assets/aistudio/file_00000000ca28821180ba196dbc5c5f05_960296c9.webp";
 
 export default function AboutSection() {
   const [imgFailed, setImgFailed] = useState(false);

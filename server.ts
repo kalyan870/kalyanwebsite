@@ -76,7 +76,7 @@ async function createServer() {
           url: `${origin}/blog/${encodeURIComponent(post.id)}`,
           image:
             post.coverImage ||
-            `${origin}/assets/aistudio/file_00000000101c8211a5934cb71d9606fd_e8b3c8a1.png`,
+            `${origin}/assets/aistudio/file_00000000101c8211a5934cb71d9606fd_e8b3c8a1.webp`,
         };
       }
     }
@@ -87,7 +87,7 @@ async function createServer() {
         "Personal website of Saragadam Kalyan — AI Engineer and Full-Stack Developer building practical LLM, RAG, agentic, and multimodal web systems.",
       type: "website",
       url: `${origin}/`,
-      image: `${origin}/assets/aistudio/file_00000000101c8211a5934cb71d9606fd_e8b3c8a1.png`,
+      image: `${origin}/assets/aistudio/file_00000000101c8211a5934cb71d9606fd_e8b3c8a1.webp`,
     };
   }
 

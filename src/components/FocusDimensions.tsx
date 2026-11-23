@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
-import systemsArtwork from "../assets/images/spotlight_ai_architecture_1794758505084.jpg";
+import systemsArtwork from "../assets/images/spotlight_ai_architecture_1794758505084.webp";
 import { FOCUS_DIMENSIONS, PROFILE } from "../data/kalyanData";
 
 export default function FocusDimensions() {

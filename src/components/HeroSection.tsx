@@ -4,7 +4,7 @@ import { AnimatePresence, motion, useReducedMotion, type Variants } from "motion
 import { CORE_CAPABILITIES, PROFILE } from "../data/kalyanData";
 
 const HERO_PORTRAIT_SRC =
-  "/assets/aistudio/file_00000000101c8211a5934cb71d9606fd_e8b3c8a1.png";
+  "/assets/aistudio/file_00000000101c8211a5934cb71d9606fd_e8b3c8a1.webp";
 
 const CURIOSITY_NOTES = [
   "while (curious) { learn(); build(); ship(); }",

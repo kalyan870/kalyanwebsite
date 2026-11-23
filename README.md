@@ -15,29 +15,28 @@ The Vercel project alias may also resolve at https://portfolio-kalyan870s-projec
 
 The Cloudflare Pages deployment is live. The custom domain `kalyan.ai` is not yet listed as connected.
 
-## Architecture
+## Architecture and deployment boundaries
 
 ```mermaid
 flowchart LR
-    Visitor[Visitor Browser] --> Host{Static Hosting}
+    Browser[Browser: React + TypeScript] --> Host{Static asset host}
     Host --> Vercel[Vercel]
     Host --> Netlify[Netlify]
-    Host --> Cloudflare[Cloudflare Pages]
-    Vercel --> SPA[React + TypeScript SPA]
-    Netlify --> SPA
-    Cloudflare --> SPA
-    Firebase --> SPA
-    SPA --> Assets[Portfolio sections and bundled assets]
-    SPA --> Firebase[Firebase Auth + Firestore<br/>optional build-time config]
-    SPA --> API[API routes]
-    API --> Gemini[Gemini API<br/>server-side key]
-    API --> Providers[Contact, newsletter, social data providers]
-    GitHub[GitHub main branch] --> CI[GitHub Actions]
-    CI --> Netlify
-    Firebase --> Build[Static dist build]
+    Host --> CF[Cloudflare Pages]
+    Host --> FirebaseHost[Firebase Hosting]
+    Browser --> Auth[Firebase Auth]
+    Browser --> Store[Firestore: owner-scoped rules]
+    Browser --> Api[HTTP API adapter]
+    Vercel --> Api
+    Express[Node Express server] --> Api
+    Api --> Gemini[Gemini API: server-only key]
+    Api --> Providers[GitHub, Substack, email providers]
+    Express --> Live[Gemini Live WebSocket]
+    GitHub[GitHub main] --> CI[GitHub Actions]
+    CI --> Deploy[Configured host workflow]
 ```
 
-The frontend is a static Vite build in `dist/`. Vercel, Netlify, and Firebase Hosting serve the current production builds. Firebase and server-backed integrations require deployment environment variables; static hosting alone does not activate the Express API routes.
+The frontend is a static Vite build in `dist/`. `server.ts` provides Express HTTP routes and the Gemini Live WebSocket; `api/index.ts` adapts the HTTP routes for Vercel. Static hosting serves the UI only unless that provider has a matching serverless-function adapter configured. The Netlify redirect expects a function under `netlify/functions`; Cloudflare Pages currently has no Functions adapter in this repository. Firebase Auth and Firestore are the existing account and saved-data services; Firestore rules deny access by default and scope user records to verified owners. No relational database or upload workflow currently requires Neon or R2. Never put Gemini or provider secrets in `VITE_*` variables.
 
 ## Screenshots
 

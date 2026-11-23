@@ -17,7 +17,7 @@ export function buildDefaultMeta(origin: string): SocialMetaPayload {
       "Personal website of Saragadam Kalyan — AI Engineer and Full-Stack Developer building practical LLM, RAG, agentic, and multimodal web systems.",
     type: "website",
     url: `${origin}/`,
-    image: `${origin}/assets/aistudio/file_00000000101c8211a5934cb71d9606fd_e8b3c8a1.png`,
+    image: `${origin}/assets/aistudio/file_00000000101c8211a5934cb71d9606fd_e8b3c8a1.webp`,
   };
 }
 
@@ -41,7 +41,7 @@ export function buildArticleMeta(article: SubstackPost, origin: string): SocialM
     url: `${origin}/blog/${encodeURIComponent(article.id)}`,
     image:
       article.coverImage ||
-      `${origin}/assets/aistudio/file_00000000101c8211a5934cb71d9606fd_e8b3c8a1.png`,
+      `${origin}/assets/aistudio/file_00000000101c8211a5934cb71d9606fd_e8b3c8a1.webp`,
     author: article.author || "Saragadam Kalyan",
     publishedTime: article.pubDate,
   };
