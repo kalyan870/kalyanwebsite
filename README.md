@@ -4,16 +4,28 @@ Personal portfolio for AI engineering, GenAI, agent workflows, and full-stack pr
 
 ## Live deployments
 
-| Host | Production URL | Status |
+| Host | URL | Status checked 2026-11-24 |
 | --- | --- | --- |
-| Vercel | https://saragadam-kalyan-ai-portfolio-kalyan870s-projects.vercel.app | Live |
-| Netlify | https://joyful-pegasus-f68efd.netlify.app | Live |
-| Firebase Hosting | https://elated-garden-472910-m2.web.app | Live |
-| Cloudflare Pages | https://8380ea3c.saragadam-kalyan-ai-portfolio.pages.dev/ | Live |
+| Netlify | [joyful-pegasus-f68efd.netlify.app](https://joyful-pegasus-f68efd.netlify.app/) | HTTP 200 |
+| Firebase Hosting | [elated-garden-472910-m2.web.app](https://elated-garden-472910-m2.web.app/) | HTTP 200 |
+| Cloudflare Pages | [saragadam-kalyan-ai-portfolio.pages.dev](https://saragadam-kalyan-ai-portfolio.pages.dev/) | HTTP 200 |
 
-The Vercel project alias may also resolve at https://portfolio-kalyan870s-projects.vercel.app. The primary URL above is the production alias returned by the successful deployment.
+The Vercel team aliases currently redirect to Vercel SSO and are not public portfolio links. The V1 and V2 public sites are listed below instead.
 
-The Cloudflare Pages URL is a prior deployment. The repository workflow builds every push and publishes only when `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` are configured as GitHub Actions secrets. The custom domains `kalyan.ai` and `showcase.kalyan.ai` currently need DNS updates at their registrar before Vercel can verify them.
+The Pages workflow publishes only when its Cloudflare credentials are configured. The custom domains `kalyan.ai` and `showcase.kalyan.ai` did not resolve during this check and should not be used as live links yet.
+
+## Portfolio editions
+
+| Version | Layout | Link |
+| --- | --- | --- |
+| V1 | Side-by-side introduction and portrait | [kalyannexus.vercel.app](https://kalyannexus.vercel.app/) |
+| V2 | Full-screen portfolio hero | [kalyanportfolio-five.vercel.app](https://kalyanportfolio-five.vercel.app/) |
+
+The V1 screenshot preserves the side-by-side version; V2 remains the separate full-screen edition.
+
+| V1 — side-by-side | V2 — full-screen |
+| --- | --- |
+| ![Kalyan portfolio V1](docs/screenshots/portfolio-v1.webp) | ![Kalyan portfolio V2](docs/screenshots/portfolio-v2.webp) |
 
 ## Architecture and deployment boundaries
 
