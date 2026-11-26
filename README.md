@@ -1,6 +1,7 @@
 # Kalyan Saragadam — AI Engineer & Full Stack Developer
 
 Personal portfolio for AI engineering, GenAI, agent workflows, and full-stack projects. Built with React 19, TypeScript, Vite 8, Tailwind CSS, Firebase, and Gemini server routes.
+**Live link:** [https://saragadam-kalyan-ai-portfolio.vercel.app](https://saragadam-kalyan-ai-portfolio.vercel.app)
 
 ## Live deployments
 
@@ -28,6 +29,11 @@ The V1 screenshot preserves the side-by-side version; V2 remains the separate fu
 | ![Kalyan portfolio V1](docs/screenshots/portfolio-v1.webp) | ![Kalyan portfolio V2](docs/screenshots/portfolio-v2.webp) |
 
 ## Architecture and deployment boundaries
+
+![saragadam-kalyan-ai-portfolio architecture map](docs/images/saragadam-kalyan-ai-portfolio-architecture.png)
+
+[Architecture notes](docs/architecture.md) · [Editable SVG](docs/images/saragadam-kalyan-ai-portfolio-architecture.svg)
+
 
 ```mermaid
 flowchart LR
