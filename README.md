@@ -11,7 +11,7 @@ Personal portfolio for AI engineering, GenAI, agent workflows, and full-stack pr
 | Firebase Hosting | [kalyanwebsite-870.web.app](https://kalyanwebsite-870.web.app/) | HTTP 200 |
 | Cloudflare Pages | [kalyanwebsite-870.pages.dev](https://kalyanwebsite-870.pages.dev/) | HTTP 200 |
 | Vercel | [kalyanwebsite-870.vercel.app](https://kalyanwebsite-870.vercel.app/) | HTTP 200 |
-| GitHub Pages | [kalyan870.github.io/kalyanwebsite](https://kalyan870.github.io/kalyanwebsite/) | Redeploying after repository rename |
+| GitHub Pages | [kalyan870.github.io/kalyanwebsite](https://kalyan870.github.io/kalyanwebsite/) | HTTP 200; page, JS, CSS, and image verified |
 
 The previous provider URLs remain available as legacy aliases. The V1 and V2 public sites are listed below.
 
