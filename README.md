@@ -1,7 +1,13 @@
 # kalyanwebsite — Saragadam Kalyan's AI Engineering Portfolio
 
 Personal portfolio for AI engineering, GenAI, agent workflows, and full-stack projects. Built with React 19, TypeScript, Vite 8, Tailwind CSS, Firebase, and Gemini server routes.
-**Live link:** [https://kalyanwebsite-870.vercel.app](https://kalyanwebsite-870.vercel.app)
+
+[![Live portfolio](https://img.shields.io/badge/Live-Portfolio-111827?logo=vercel&logoColor=white)](https://kalyanwebsite-870.vercel.app/)
+[![Cloudflare Pages](https://img.shields.io/badge/Cloudflare-Pages-f38020?logo=cloudflare&logoColor=white)](https://kalyanwebsite-870.pages.dev/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-222?logo=github)](https://kalyan870.github.io/kalyanwebsite/)
+[![Verify portfolio](https://github.com/kalyan870/kalyanwebsite/actions/workflows/verify.yml/badge.svg)](https://github.com/kalyan870/kalyanwebsite/actions/workflows/verify.yml)
+
+**[Open the live portfolio →](https://kalyanwebsite-870.vercel.app/)**
 
 ## Live deployments
 
