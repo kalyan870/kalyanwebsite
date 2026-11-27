@@ -334,7 +334,7 @@ export default function Navbar({
             href="#top"
             className="text-xl md:text-2xl font-extrabold tracking-tight text-black whitespace-nowrap shrink-0 focus-visible:outline-3 focus-visible:outline-[#de4ba4] focus-visible:outline-offset-4"
           >
-            Saragadam Kalyan
+            kalyanwebsite
           </a>
 
           {/* Zone 2: Clean single-line text nav links */}
@@ -461,7 +461,7 @@ export default function Navbar({
                     NAVIGATION
                   </span>
                   <span className="text-base font-extrabold tracking-tight text-black">
-                    Saragadam Kalyan
+                    kalyanwebsite
                   </span>
                 </div>
                 <button

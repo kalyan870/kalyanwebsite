@@ -12,7 +12,7 @@ export interface SocialMetaPayload {
 
 export function buildDefaultMeta(origin: string): SocialMetaPayload {
   return {
-    title: "Saragadam Kalyan | AI Engineer & Full-Stack Developer",
+    title: "kalyanwebsite | AI Engineer & Full-Stack Developer",
     description:
       "Personal website of Saragadam Kalyan — AI Engineer and Full-Stack Developer building practical LLM, RAG, agentic, and multimodal web systems.",
     type: "website",
