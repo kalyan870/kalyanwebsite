@@ -1,17 +1,18 @@
 # kalyanwebsite — Saragadam Kalyan's AI Engineering Portfolio
 
 Personal portfolio for AI engineering, GenAI, agent workflows, and full-stack projects. Built with React 19, TypeScript, Vite 8, Tailwind CSS, Firebase, and Gemini server routes.
-**Live link:** [https://saragadam-kalyan-ai-portfolio.vercel.app](https://saragadam-kalyan-ai-portfolio.vercel.app)
+**Live link:** [https://kalyanwebsite-870.vercel.app](https://kalyanwebsite-870.vercel.app)
 
 ## Live deployments
 
-| Host | URL | Status checked 2026-11-24 |
+| Host | URL | Status checked 2026-11-27 |
 | --- | --- | --- |
-| Netlify | [joyful-pegasus-f68efd.netlify.app](https://joyful-pegasus-f68efd.netlify.app/) | HTTP 200 |
-| Firebase Hosting | [elated-garden-472910-m2.web.app](https://elated-garden-472910-m2.web.app/) | HTTP 200 |
-| Cloudflare Pages | [saragadam-kalyan-ai-portfolio.pages.dev](https://saragadam-kalyan-ai-portfolio.pages.dev/) | HTTP 200 |
+| Netlify | [kalyanwebsite-870.netlify.app](https://kalyanwebsite-870.netlify.app/) | HTTP 200 |
+| Firebase Hosting | [kalyanwebsite-870.web.app](https://kalyanwebsite-870.web.app/) | HTTP 200 |
+| Cloudflare Pages | [kalyanwebsite-870.pages.dev](https://kalyanwebsite-870.pages.dev/) | HTTP 200 |
+| Vercel | [kalyanwebsite-870.vercel.app](https://kalyanwebsite-870.vercel.app/) | HTTP 200 |
 
-The Vercel team aliases currently redirect to Vercel SSO and are not public portfolio links. The V1 and V2 public sites are listed below instead.
+The previous provider URLs remain available as legacy aliases. The V1 and V2 public sites are listed below.
 
 The Pages workflow publishes only when its Cloudflare credentials are configured. The custom domains `kalyan.ai` and `showcase.kalyan.ai` did not resolve during this check and should not be used as live links yet.
 

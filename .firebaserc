@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "elated-garden-472910-m2"
+  },
+  "targets": {
+    "elated-garden-472910-m2": {
+      "hosting": {
+        "portfolio-legacy": [
+          "elated-garden-472910-m2"
+        ],
+        "portfolio-new": [
+          "kalyanwebsite-870"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

@@ -2,7 +2,7 @@
 
 **Repository:** [https://github.com/kalyan870/saragadam-kalyan-ai-portfolio](https://github.com/kalyan870/saragadam-kalyan-ai-portfolio)
 
-**Live link:** https://saragadam-kalyan-ai-portfolio.vercel.app
+**Live link:** https://kalyanwebsite-870.vercel.app
 
 ![saragadam-kalyan-ai-portfolio architecture map](images/saragadam-kalyan-ai-portfolio-architecture.png)
 
