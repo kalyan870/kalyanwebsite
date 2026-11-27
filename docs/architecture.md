@@ -1,6 +1,6 @@
-# saragadam-kalyan-ai-portfolio — architecture and repository status
+# kalyanwebsite — architecture and repository status
 
-**Repository:** [https://github.com/kalyan870/saragadam-kalyan-ai-portfolio](https://github.com/kalyan870/saragadam-kalyan-ai-portfolio)
+**Repository:** [https://github.com/kalyan870/kalyanwebsite](https://github.com/kalyan870/kalyanwebsite)
 
 **Live link:** https://kalyanwebsite-870.vercel.app
 

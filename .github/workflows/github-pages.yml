@@ -28,7 +28,7 @@ jobs:
           cache: npm
       - run: npm ci --legacy-peer-deps
       - name: Build for the repository Pages path
-        run: npm run build -- --base=/saragadam-kalyan-ai-portfolio/
+        run: npm run build -- --base=/kalyanwebsite/
         env:
           VITE_FIREBASE_API_KEY: ${{ secrets.VITE_FIREBASE_API_KEY }}
           VITE_FIREBASE_AUTH_DOMAIN: ${{ secrets.VITE_FIREBASE_AUTH_DOMAIN }}
